@@ -1,0 +1,23 @@
+# Home loan problem using age,cibil score and salary in if else nestedd loop
+
+age=int(input("Enter your age: "))
+cibil_score=int(input("Enter your Cibil Score: "))
+salary=int(input("Enter your salary: "))
+
+if age>25 and age<60:
+    print("Age is between 25 years and 60 years ")
+    if salary>=25000:
+        print("Salary is more than or equal to 25000 rs\nLoan approved at low interest rate because,")
+        if cibil_score>700:
+            print("your Cibil is more than 700")
+        else:
+            print("Your cibil is less than 700\nLoan declined")
+    else:
+        print("Your salary is less than 25000\nLoan declined")
+else:
+    if age>60:
+        print("Apply for senior citizen scheames\nPlease visit your nearest ABC bank branch")
+    elif age<=18 and age<=25:
+        print(f"Please try later. You are closer to be eligible for ABC bank home loan by {25-age} years")
+    else:
+        print("Your age is not between 25 years to 60 years\nLoan declined")
